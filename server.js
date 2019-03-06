@@ -22,5 +22,5 @@ app.use(
 
 app.listen(process.env.PORT || 4000, (err) => {
 	if (err) console.log(err);
-	else console.log('Server is running on port 4000');
+	else console.log('Server is running on port 4000 or default');
 });
