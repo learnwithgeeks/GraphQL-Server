@@ -2,6 +2,9 @@ const app = require('express')();
 const graphqlHTTP = require('express-graphql'); // This module is responsible for running graphql with express js app
 const schema = require('./schema/schema'); //graph ql schema
 const mongoose = require('mongoose');
+const cors = require('cors');
+
+app.use(cors());
 
 mongoose.connect('mongodb://localhost:27017/graphql', (err) => {
 	if (err) console.log(err);
@@ -17,7 +20,7 @@ app.use(
 	})
 );
 
-app.listen(3000, (err) => {
+app.listen(4000, (err) => {
 	if (err) console.log(err);
-	else console.log('Server is running on port 3000');
+	else console.log('Server is running on port 4000');
 });
